@@ -7,21 +7,19 @@ here's a tutorial to add it
 vrp example : 
 - vrp->client->base.lua
 
+if it dosent work, include this too
+local notifyWords = {
+		["Succes"] = {'succes', "success"},
+		["Eroare"] = {'error', "error"},
+		["Info"] = {'info', "info"}
+	}
+
+EVENT TRIGGER :
+-  TriggerEvent('blc:notify', 'inform', tostring(msg), 5000, 'notify')
+
+
 this is a random func !, you dont have to add a new function in your base.lua, here's a example of how you gotta paste it in a || random function || in your base.lua
-function tvRP.stopAnim(upper)
-  anims = {} -- stop all sequences
-  if not importantAnim then
-    inAnim = false
-    if upper then
-      ClearPedSecondaryTask(tempPed)
-    else
-      ClearPedTasks(tempPed)
-    end
-  else
-    tvRP.notify("error.", "error")
-  end
-end
-function tvRP.notify(msg, nType, nTitle, nMsec)
+
 
 	local function clearColors(str)
     local idf = string.match(str, "~.~")
@@ -37,13 +35,9 @@ function tvRP.notify(msg, nType, nTitle, nMsec)
     end
     
     return str
-end
 
-local notifyWords = {
-		["Succes"] = {'succes', "success"},
-		["Eroare"] = {'error', "error"},
-		["Info"] = {'info', "info"}
-	}
+
+
 
 	msg = clearColors(msg)
 
@@ -53,5 +47,3 @@ local notifyWords = {
 			nType, nTitle = table.unpack(data)
 		end
 	end
-  TriggerEvent('blc:notify', 'inform', tostring(msg), 5000, 'notify')
-end
