@@ -53,5 +53,5 @@ local notifyWords = {
 			nType, nTitle = table.unpack(data)
 		end
 	end
-  TriggerEvent('blc:notify', 'inform', tostring(msg), 5000, 'RedZone Romania')
+  TriggerEvent('blc:notify', 'inform', tostring(msg), 5000, 'notify')
 end
