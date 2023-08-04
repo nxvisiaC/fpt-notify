@@ -18,7 +18,7 @@ function tvRP.stopAnim(upper)
       ClearPedTasks(tempPed)
     end
   else
-    tvRP.notify("Nu poti oprii aceasta animatie.", "error")
+    tvRP.notify("error.", "error")
   end
 end
 function tvRP.notify(msg, nType, nTitle, nMsec)
@@ -39,7 +39,7 @@ function tvRP.notify(msg, nType, nTitle, nMsec)
     return str
 end
 
-  local notifyWords = {
+local notifyWords = {
 		["Succes"] = {'succes', "success"},
 		["Eroare"] = {'error', "error"},
 		["Info"] = {'info', "info"}
