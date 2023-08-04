@@ -18,7 +18,7 @@ function tvRP.stopAnim(upper)
       ClearPedTasks(tempPed)
     end
   else
-    tvRP.notify("This is a error.", "error")
+    tvRP.notify("Nu poti oprii aceasta animatie.", "error")
   end
 end
 function tvRP.notify(msg, nType, nTitle, nMsec)
@@ -53,5 +53,5 @@ end
 			nType, nTitle = table.unpack(data)
 		end
 	end
-  TriggerEvent('blc:notify', 'inform', tostring(msg), 5000, 'notify')
+  TriggerEvent('blc:notify', 'inform', tostring(msg), 5000, 'RedZone Romania')
 end
